@@ -1,0 +1,88 @@
+body {
+    font-size: 15pt;
+}
+
+.CardSlider {
+  position: relative;
+  top: 10px;
+  width: 95%;
+  max-width: 1000px;
+  height: 540px;
+  background-color: rgb(50, 100, 50);
+  border-radius: 10px;
+  margin: auto;
+}
+#CardLeftButton {
+  position: absolute;
+  left: -30px;
+  top: calc(50% - 25px);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+#CardRightButton {
+  position: absolute;
+  right: -30px;
+  top: calc(50% - 25px);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+.CardHolder {
+  position: absolute;
+  width: 380px;
+  height: 560px;
+}
+.Card {
+  position: relative;
+  border-radius: 10px;
+  width: 300px;
+  height: 500px;
+  background-color: rgb(230, 255, 230);
+  box-shadow: 0 0 10px rgba(40, 40, 40, 0.8);
+  padding: 5px;
+  margin: auto;
+  top: 15px;
+  animation: CardFadeIn 0.5s ease;
+}
+.Card:hover {
+  animation: CardFadeOut 0.5s ease;
+  padding: 30px;
+  top: -5px;
+}
+.Card > h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  text-decoration: underline;
+  animation: fadeIn 1s ease;
+}
+.Card > p {
+  animation: fadeIn 2s ease;
+}
+@keyframes CardFadeIn {
+  from {
+    padding: 30px;
+    top: -5px;
+  }
+  to {
+    padding: 5px;
+    top: 15px;
+  }
+}
+@keyframes CardFadeOut {
+  from {
+    padding: 5px;
+    top: 15px;
+  }
+  to {
+    padding: 30px;
+    top: -5px;
+  }
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
